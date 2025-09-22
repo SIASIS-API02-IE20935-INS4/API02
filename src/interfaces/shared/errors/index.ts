@@ -17,7 +17,7 @@ export enum RequestErrorTypes {
   REQUEST_FAILED = "REQUEST_FAILED",
   MALFORMED_REQUEST = "MALFORMED_REQUEST", // 🆕 Solicitud mal formada
   PAYLOAD_TOO_LARGE = "PAYLOAD_TOO_LARGE", // 🆕 Carga útil demasiado grande
-  MISSING_REQUIRED_PARAMETERS="MISSING_REQUIRED_PARAMETERS"
+  MISSING_REQUIRED_PARAMETERS = "MISSING_REQUIRED_PARAMETERS",
 }
 
 /**
@@ -92,7 +92,7 @@ export enum ValidationErrorTypes {
   DATE_OUT_OF_RANGE = "DATE_OUT_OF_RANGE", // 🆕 Fecha fuera de rango
   INVALID_TIME_FORMAT = "INVALID_TIME_FORMAT", // 🆕 Formato de hora inválido
   INVALID_ENUM_VALUE = "INVALID_ENUM_VALUE", // 🆕 Valor de enumeración inválido
-  VALIDATION_ERROR="VALIDATION_ERROR_GENERICO"
+  VALIDATION_ERROR = "VALIDATION_ERROR_GENERICO",
 }
 
 /**
@@ -106,6 +106,7 @@ export enum DataConflictErrorTypes {
   CONCURRENT_MODIFICATION = "CONFLICTO_MODIFICACIÓN_CONCURRENTE", // 🆕 Modificación concurrente
   VERSION_MISMATCH = "CONFLICTO_VERSIÓN_NO_COINCIDE", // 🆕 Versión no VALIDATION_ERROR
   DEPENDENCY_EXISTS = "CONFLICTO_DEPENDENCIA_EXISTE", // 🆕 Existe dependencia
+  MISSING_REQUIRED_DATA = "MISSING_REQUIRED_DATA",
 }
 
 /**
@@ -147,6 +148,7 @@ export enum DataErrorTypes {
   INVALID_DATA_FORMAT = "INVALID_DATA_FORMAT", // 🆕 Formato de datos inválido
   DATA_CORRUPTED = "DATA_CORRUPTED", // 🆕 Datos corruptos
   DATA_INCONSISTENT = "DATA_INCONSISTENT", // 🆕 Datos inconsistentes
+  MISSING_DATA = "MISSING_DATA", // 🆕 Datos faltantes
 }
 
 /**
@@ -238,8 +240,6 @@ export default AllErrorTypes;
 // 🔄 EXPORTACIONES PARA RETROCOMPATIBILIDAD
 // ================================================================
 
-
-
 /**
  * 🆕 Grupos de errores para facilitar el manejo
  */
@@ -284,4 +284,3 @@ export const ErrorGroups = {
     RequestErrorTypes.MISSING_PARAMETERS,
   ],
 } as const;
-
